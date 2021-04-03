@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controle de funcionários</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./CSS/style.css">
-  <script src="./Scripts/sistema-rh.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de funcionários</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./Scripts/sistema-rh.js" defer></script>
 </head>
 <body>
-      <!-- Área do navbar -->
-      <nav class="nav-bar">
+    <!-- Área do navbar -->
+    <nav class="nav-bar">
         <h3 id="nav-titulo">Controle de Funcionários</h3>
         <label for="tipoBusca">
             Busca por:
@@ -37,31 +37,31 @@
 
         <!-- Cadastro de Funcionários -->
         <div id="cadastro">
-          <h3>Cadastro de Funcionários</h3>
-          <form id="form-cadastro" class="form-cadastro">
-              <div class="form-field">
-                  <label for="nomeFuncionario" class="label-input">Nome do funcionário:</label>
-                  <input id="nomeFuncionario" type="text" placeholder="Digite o nome">
-              </div>
-              <div class="form-field">
-                  <label for="idadeFuncionario" class="label-input">Idade:</label>
-                  <input id="idadeFuncionario" type="number" min="0" max="65" placeholder="Digite Idade">
-              </div>
-              <div class="form-field">
-                  <label for="cargoFuncionario" class="label-input">Cargo:</label>
-                  <input id="cargoFuncionario" type="text" placeholder="Digite o cargo">
-              </div>
-              <div class="form-field">
+            <h3>Cadastro de Funcionários</h3>
+            <form id="form-cadastro" class="form-cadastro">
+                <div class="form-field">
+                    <label for="nomeFuncionario" class="label-input">Nome do funcionário:</label>
+                <input id="nomeFuncionario" type="text" placeholder="Digite o nome">
+                </div>
+                <div class="form-field">
+                    <label for="idadeFuncionario" class="label-input">Idade:</label>
+                    <input id="idadeFuncionario" type="number" min="0" max="65" placeholder="Digite Idade">
+                </div>
+                <div class="form-field">
+                    <label for="cargoFuncionario" class="label-input">Cargo:</label>
+                    <input id="cargoFuncionario" type="text" placeholder="Digite o cargo">
+                </div>
+                <div class="form-field">
                 <label for="salarioFuncionario" class="label-input">Salário:</label>
                 <input id="salarioFuncionario" type="number" min="0" max="30000" placeholder="Digite o salário">
-              </div>
-              <div class="form-field">
+            </div>
+            <div class="form-field">
                 <label for="dataAdmissao" class="label-input">Data de Admissão:</label>
                 <input id="dataAdmissao" type="date" placeholder="Digite a data">
-              </div>
+            </div>
             
 
-              <!-- <div class="form-field">
+            <!-- <div class="form-field">
                   <label for="materia" class="label-input">Selecione a matéria:</label>
                   <select id="materia">
                       <option value="Javascript">Javascript</option>
@@ -70,19 +70,19 @@
                       <option value="Arquitetura">Arquitetura</option>
                   </select>
               </div> -->
-              <div class="form-acoes">
-                  <button class="cadastrarProduto" type="button"
-                  onclick="adicionaAluno
-                  (nomeFuncionario.value,
-                  parseFloat(idadeFuncionario.value),
-                  parseFloat(cargoFuncionario.value),
-                  parseFloat(salarioFuncionario.value),
-                  dataAdmissao.value)">Adicionar</button>
-              </div>
-          </form>
-      </div>
+            <div class="form-acoes">
+                <button class="cadastrarFuncionario" type="button"
+                onclick="adicionaFuncionario
+                (nomeFuncionario.value,
+                parseFloat(idadeFuncionario.value),
+                cargoFuncionario.value,
+                parseFloat(salarioFuncionario.value),
+                dataAdmissao.value)">Adicionar</button>
+            </div>
+        </form>
+    </div>
 
-      <!-- Médias -->
+    <!-- Médias -->
     <h3 class="titulo">Resumo RH</h3>
     <div id="mediasDadosRH" class="medias-rh">
         <h3>Total de Colaboradores :</h3><h3 id="somaTC">20</h3>
@@ -95,15 +95,15 @@
     <h3 class="titulo">Funcionários: </h3>
     <div id="visualizacao">
 
-      <!-- Div Mock -->
+    <!-- Div Mock -->
 
-      <div class="card">
+    <!-- <div class="card">
         <div class="descricao-card">
             <p><b>José da Silva</b></p>
             <p>Idade: <b>45 anos</b></p>
             <p>Cargo: <b>Gerente de Projetos</b></p>
             <p>Salário: <b>R$ 10.000</b></p>
-            <p>Data Adimissão: <b>15/05/2022</b></p>
+            <p>Data Admissão: <b>15/05/2022</b></p>
         </div>
         <div class="acoes">
             <span class="material-icons acao" onclick="removeFuncionario()">
@@ -111,11 +111,11 @@
             </span>
             <span class="material-icons edit" onclick="editarFuncionario()">edit</span>
         </div>
+    </div> -->
+
+    <!-- Div Mock -->
+
     </div>
 
-      <!-- Div Mock -->
-
-    </div>
-  
 </body>
 </html>
