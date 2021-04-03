@@ -1,0 +1,249 @@
+:root {
+  --cor-padrao-nav: rgba(55, 55, 55, 0.75);
+  --cor-padrao-nav-hover: #373737;
+  --cor-padrao-neutro: white;
+  --cor-padrao-escuro: #000000;
+  --cor-padrao-cinza-claro: #DDDDDD;
+  --cor-padrao-cinza-claro-2: #EDEDED;
+  --cor-box-shadow-padrao: rgba(0,0,0,0.2);
+  --cor-aviso-perigo: #AD112F;
+  --cor-padrao-background-input: #fcfcfc;
+  --cor-padrao-sucesso: green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+
+/* --------------------Nav Styles-------------------- */
+/* -------------------------------------------------- */
+
+.nav-bar {
+  width: 100%;
+  padding: 15px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-padrao-neutro);
+  color: var(--cor-padrao-nav);
+  border-bottom: 1px inset;
+}
+
+.nav-bar h3 {
+  cursor: pointer;
+  color: var(--cor-padrao-nav);
+}
+
+#nav-opcoes {
+  list-style: none;
+  display: flex;
+}
+
+#nav-opcoes li {
+  padding: 10px;
+  font-weight: 600;
+}
+
+#nav-opcoes a {
+  text-decoration: none;
+  color: var(--cor-padrao-nav);
+}
+
+#nav-opcoes a:hover {
+  color: var(--cor-padrao-nav-hover);
+}
+
+.input-busca {
+  width: 100%;
+  padding: 10px 0px 10px 30px;
+  border: 1px solid var(--cor-padrao-nav);
+  background: #f1f1f1;
+  outline: none;
+  border-radius: 4px;
+}
+
+.form-busca {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.busca {
+  position: absolute;
+  left: 5px;
+  color: var(--cor-padrao-nav);
+}
+
+
+/* --------------------Area de Cadastro-------------------- */
+/* -------------------------------------------------------- */
+
+#cadastro {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+#cadastro .form-cadastro {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#cadastro .form-cadastro input {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  background-color: var(--cor-padrao-background-input);
+  border-bottom: 2px solid var(--cor-padrao-cinza-claro);
+  padding: 10px 0px 10px 0px;
+}
+
+#cadastro .form-cadastro input:focus {
+  outline: 0;
+}
+
+#cadastro .form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  width: 30%;
+}
+
+#cadastro .form-field .label-input{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#cadastro .form-field-img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#cadastro .form-cadastro .form-acoes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+
+#cadastro .form-cadastro .form-acoes button {
+  background-color: #355C7D ;
+  border: none;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+#cadastro .form-cadastro .form-acoes button:hover {
+  color: white;
+  opacity: 1;
+}
+
+.medias-rh {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.medias-rh h3 {
+  color: var(--cor-padrao-nav);
+  font-weight: bold;
+}
+
+#somaTC,
+#somaSal,
+#somaIdade,
+#mediaSal {
+  color: var(--cor-padrao-escuro);
+}
+
+
+/* --------------------Card Funcionarios-------------------- */
+/* --------------------------------------------------------- */
+
+.titulo {
+  /* padding-left: 130px; */
+  display: flex;
+  justify-content: center;
+}
+
+#visualizacao {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+}
+
+#visualizacao .card {
+  max-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 var(--cor-box-shadow-padrao);
+  border-radius: 5px 5px;
+}
+
+#visualizacao .card:hover {
+  box-shadow: 10px 5px 5px var(--cor-box-shadow-padrao);
+}
+
+#visualizacao .descricao-card {
+  color: var(--cor-padrao-escuro);
+  margin: 20px 10px;
+}
+
+#visualizacao .descricao-card .aprovado {
+  color: var(--cor-padrao-sucesso);
+}
+
+#visualizacao .descricao-card .reprovado {
+  color: var(--cor-aviso-perigo);
+}
+
+#visualizacao .acoes {
+  border-top: 1px solid var(--cor-padrao-cinza-claro);
+  background-color: var(--cor-padrao-cinza-claro-2);
+  color: var(--cor-padrao-neutro);
+  padding: 10px;
+}
+
+#visualizacao .acoes .acao{
+  cursor: pointer;
+  color: var(--cor-aviso-perigo);
+  opacity: 0.8;
+}
+
+#visualizacao .acoes .acao:hover{
+  color: var(--cor-aviso-perigo);
+  opacity: 1;
+}
+
+.edit{
+  color: var(--cor-padrao-escuro);
+  cursor: pointer;
+}

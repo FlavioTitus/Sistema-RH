@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de funcionários</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <script src="./Scripts/sistema-rh.js" defer></script>
+</head>
+<body>
+      <!-- Área do navbar -->
+      <nav class="nav-bar">
+        <h3 id="nav-titulo">Controle de Funcionários</h3>
+        <label for="tipoBusca">
+            Busca por:
+            <select id="tipoBusca">
+                <option value="id">Id</option>
+                <option value="nome">Nome</option>
+                <option value="materia">Cargo</option>
+            </select>
+        </label>
+        <form class="form-busca">
+            <input type="text" id="inputBusca" class="input-busca"
+                placeholder="Digite o nome de um funcionário para procurar">
+            <span class="material-icons busca">
+                search
+            </span>
+        </form>
+        <!-- <ul id="nav-opcoes">
+            <li><a href="">Login</a></li>
+            <li><a href="">Cadastro</a></li>
+            <li><a href="">Suporte</a></li>
+        </ul> -->
+    </nav>
+
+        <!-- Cadastro de Funcionários -->
+        <div id="cadastro">
+          <h3>Cadastro de Funcionários</h3>
+          <form id="form-cadastro" class="form-cadastro">
+              <div class="form-field">
+                  <label for="nomeFuncionario" class="label-input">Nome do funcionário:</label>
+                  <input id="nomeFuncionario" type="text" placeholder="Digite o nome">
+              </div>
+              <div class="form-field">
+                  <label for="idadeFuncionario" class="label-input">Idade:</label>
+                  <input id="idadeFuncionario" type="number" min="0" max="65" placeholder="Digite Idade">
+              </div>
+              <div class="form-field">
+                  <label for="cargoFuncionario" class="label-input">Cargo:</label>
+                  <input id="cargoFuncionario" type="text" placeholder="Digite o cargo">
+              </div>
+              <div class="form-field">
+                <label for="salarioFuncionario" class="label-input">Salário:</label>
+                <input id="salarioFuncionario" type="number" min="0" max="30000" placeholder="Digite o salário">
+              </div>
+              <div class="form-field">
+                <label for="dataAdmissao" class="label-input">Data de Admissão:</label>
+                <input id="dataAdmissao" type="date" placeholder="Digite a data">
+              </div>
+            
+
+              <!-- <div class="form-field">
+                  <label for="materia" class="label-input">Selecione a matéria:</label>
+                  <select id="materia">
+                      <option value="Javascript">Javascript</option>
+                      <option value="HTML/CSS">HTML/CSS</option>
+                      <option value="React">React</option>
+                      <option value="Arquitetura">Arquitetura</option>
+                  </select>
+              </div> -->
+              <div class="form-acoes">
+                  <button class="cadastrarProduto" type="button"
+                  onclick="adicionaAluno
+                  (nomeFuncionario.value,
+                  parseFloat(idadeFuncionario.value),
+                  parseFloat(cargoFuncionario.value),
+                  parseFloat(salarioFuncionario.value),
+                  dataAdmissao.value)">Adicionar</button>
+              </div>
+          </form>
+      </div>
+
+      <!-- Médias -->
+    <h3 class="titulo">Resumo RH</h3>
+    <div id="mediasDadosRH" class="medias-rh">
+        <h3>Total de Colaboradores :</h3><h3 id="somaTC">20</h3>
+        <h3>Soma dos Salários :</h3><h3 id="somaSal">20</h3>
+        <h3>Média de idade :</h3><h3 id="somaIdade">20</h3>
+        <h3>Média Salarial :</h3><h3 id="mediaSal">20</h3>
+    </div>
+
+    <!-- Card Funcinários -->
+    <h3 class="titulo">Funcionários: </h3>
+    <div id="visualizacao">
+
+      <!-- Div Mock -->
+
+      <div class="card">
+        <div class="descricao-card">
+            <p><b>José da Silva</b></p>
+            <p>Idade: <b>45 anos</b></p>
+            <p>Cargo: <b>Gerente de Projetos</b></p>
+            <p>Salário: <b>R$ 10.000</b></p>
+            <p>Data Adimissão: <b>15/05/2022</b></p>
+        </div>
+        <div class="acoes">
+            <span class="material-icons acao" onclick="removeFuncionario()">
+                delete
+            </span>
+            <span class="material-icons edit" onclick="editarFuncionario()">edit</span>
+        </div>
+    </div>
+
+      <!-- Div Mock -->
+
+    </div>
+  
+</body>
+</html>
